@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AstroVision</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div id="loader" class="loader"></div>
+
+<div class="container">
+        <h1 class="app_name">
+            <i class="fa-solid fa-rocket"></i>
+            AstroVision</h1>
+        <p class="subtitle">
+            🚀Explore NASA's Daily Astronomy Pictures
+        </p>
+    
+    <div class="DSR-butt">
+    <form method="POST">
+    <input type="date" name="date" class="date">
+    <button type="submit" class="search">
+        Search
+    </button>
+    </form>
+
+    <a href="/random">
+        <button class="random_button">
+            <i class="fa-solid fa-shuffle"></i>
+            Random APOD
+        </button>
+    </a>
+
+    </div>
+
+        <h1 class="pic_name">{{ title }}</h1>
+
+    <p class="p1">{{ date }}</p>
+
+    {% if media_type == "image" %}
+
+        <img src="{{ image_url }}" alt="NASA Image">
+
+    {% else %}
+
+        <iframe
+            width="800"
+            height="450"
+            src="{{ image_url }}"
+            frameborder="0"
+            allowfullscreen>
+        </iframe>
+
+    {% endif %}
+    
+    <div class="fav">
+
+        <form action="/favorite" method="POST">
+
+        <input type="hidden" name="title" value="{{ title }}">
+        <input type="hidden" name="date" value="{{ date }}">
+        <input type="hidden" name="image_url" value="{{ image_url }}">
+
+        <button type="submit" class="add-fav">
+            ❤️ Add to Favorites
+        </button>
+
+        </form>
+
+        <a href="/favorites">
+        <button class="my-fav">
+            ⭐ My Favorites
+        </button>
+        </a>
+
+    </div>
+
+    
+
+    <p class="p2">{{ explanation }}</p>
+
+    <div class="buttons">
+
+        <a href="/?date={{ previous_date }}">
+        <button class="b1">
+            <i class="fa-solid fa-caret-left"></i>
+            Previous Day
+        </button>
+        </a>
+        
+        
+
+        <a href="/?date={{ next_date }}">
+        <button class="b1">
+            Next Day
+            <i class="fa-solid fa-caret-right"></i>
+        </button>
+        </a>
+
+    </div>
+
+    {% if hdurl %}
+    <a href="{{ hdurl }}" target="_blank">
+    <button class="download-button">
+        <i class="fa-solid fa-download"></i>
+        Download HD Image
+    </button>
+    </a>
+    {% endif %}
+</div>
+
+<script>
+function showLoader() {
+    document.getElementById("loader").style.display = "block";
+}
+</script>
+
+</body>
+</html>

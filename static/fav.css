@@ -1,0 +1,14 @@
+/* favorite page */
+
+.delete-btn{
+    background-color: crimson;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.delete-btn:hover{
+    transform: scale(1.05);
+}

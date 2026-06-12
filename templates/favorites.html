@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Favorites</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='fav.css') }}">
+</head>
+<body>
+
+    <h1>⭐ My Favorite APODs</h1>
+
+    {% for item in favorites %}
+
+        <div>
+
+            <h2>{{ item.title }}</h2>
+
+            <p>{{ item.date }}</p>
+
+            <img
+                src="{{ item.image_url }}"
+                width="600">
+            
+            <br><br>
+
+            <a href="/delete_favorite/{{ item.date }}">
+                <button class="delete-btn">
+                    🗑 Delete
+                </button>
+            </a>
+
+            <hr>
+
+        </div>
+
+        <hr>
+
+    {% endfor %}
+
+</body>
+</html>
