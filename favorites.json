@@ -1,17 +1,26 @@
 [
     {
-        "title": "M78: Reflecting Blue in a Sea of Red",
-        "date": "2026-01-28",
-        "image_url": "https://apod.nasa.gov/apod/image/2601/M78Red_McCauley_1080.jpg"
+        "title": "10 Days of Venus and Jupiter",
+        "date": "2026-06-14",
+        "image_url": "https://apod.nasa.gov/apod/image/2606/VenusJupiter10_Pawar_1080.jpg",
+        "explanation": "Venus and Jupiter may have caught your attention lately.  The  recent close conjunction of the two brightest planets in recent evening skies has been hard to miss. With Jupiter at the top, starting on May 30 and ending on June 8, their close approach was chronicled daily, left to right, in the featured panels from Maharashtra, India. Near the western horizon, the evening sky colors and exposures used for each panel depend on the local conditions near sunset. At their closest on June 9, the celestial pair appeared to be only about three times the width of a full moon apart. Of course, on that date, the two planets were physically separated by over 600 million kilometers in their orbits around the Sun. In the coming days, Jupiter will slowly settle into the sunset glare, but Venus will continue to move farther from the Sun in the western sky to excel in its current role as the brilliant evening star.   Gallery: Venus - Jupiter Conjunction of 2026 June"
     },
     {
-        "title": "The Compton Gamma Ray Observatory",
-        "date": "2000-01-16",
-        "image_url": "https://apod.nasa.gov/apod/image/0001/compton_deploy.jpg"
+        "title": "Swirling Magnetic Field around Our Galaxy's Central Black Hole",
+        "date": "2024-04-01",
+        "image_url": "https://apod.nasa.gov/apod/image/2404/SagAstarB_EHT_960.jpg",
+        "explanation": "What's happening to the big black hole in the center of our galaxy?  It is sucking in matter from a swirling disk -- a disk that is magnetized, it has now been confirmed. Specifically, the black hole's accretion disk has recently been seen to emit polarized light, radiation frequently associated with a magnetized source. Pictured here is a close-up of Sgr A*, our Galaxy's central black hole, taken by radio telescopes around the world participating in the Event Horizon Telescope (EHT) Collaboration.  Superposed are illustrative curved lines indicating polarized light likely emitted from swirling magnetized gas that will soon fall into the 4+ million solar mass central black hole.  The central part of this image is likely dark because little light-emitting gas is visible between us and the dark event horizon of the black hole.  Continued EHT monitoring of this and M87's central black hole may yield new clues about the gravity of black holes and how infalling matter creates disks and jets.    NASA Predicts:  Moon to Get in Way of Sun"
     },
     {
-        "title": "The Supergalactic Wind from Starburst Galaxy M82",
-        "date": "2004-06-01",
-        "image_url": "https://apod.nasa.gov/apod/image/0406/m82_hstwiyn.jpg"
+        "title": "The Magnetic Field of the Whirlpool Galaxy",
+        "date": "2021-01-20",
+        "image_url": "https://apod.nasa.gov/apod/image/2101/M51Bfield_Sofia_960.jpg",
+        "explanation": "Do magnetic fields always flow along spiral arms?  Our face-on view of the Whirlpool Galaxy (M51) allows a spectacularly clear view of the spiral wave pattern in a disk-shaped galaxy.  When observed with a radio telescope, the magnetic field appears to trace the arms' curvature.  However, with NASA\u2019s flying Stratospheric Observatory for Infrared Astronomy (SOFIA) observatory, the magnetic field at the outer edge of M51's disk appears to weave across the arms instead.  Magnetic fields are inferred by grains of dust aligning in one direction and acting like polaroid glasses on infrared light.  In the featured image, the field orientations determined from this polarized light are algorithmically connected, creating streamlines.  Possibly the gravitational tug of the companion galaxy, at the top of the frame, on the dusty gas of the reddish star-forming regions, visible in the Hubble Space Telescope image, enhances turbulence -- stirring the dust and lines to produce the unexpected field pattern of the outer arms."
+    },
+    {
+        "title": "Jupiter Meets Saturn: A Red Spotted Great Conjunction",
+        "date": "2020-12-23",
+        "image_url": "https://apod.nasa.gov/apod/image/2012/GreatConjunction_Peach_960.jpg",
+        "explanation": "It was time for their close-up. Two days ago  Jupiter and Saturn passed a tenth of a degree from each other in what is known a Great Conjunction. Although the two planets pass each other on the sky every 20 years, this was the closest pass in nearly four centuries.  Taken early in day of the Great Conjunction, the featured multiple-exposure combination captures not only both giant planets in a single frame, but also Jupiter's four largest moons (left to right) Callisto, Ganymede, Io, and Europa --  and Saturn's largest moon Titan. If you look very closely, the clear Chilescope image even captures Jupiter's Great Red Spot. The now-separating planets can still be seen remarkably close -- within about a degree -- as they set just after the Sun, toward the west, each night for the remainder of the year.    Gallery: Notable images of the Great Conjunction submitted to APOD"
     }
 ]

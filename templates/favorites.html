@@ -2,37 +2,38 @@
 <html>
 <head>
     <title>My Favorites</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='fav.css') }}">
 </head>
 <body>
 
-    <h1>⭐ My Favorite APODs</h1>
+    <h1>MY FAVORITE APODs</h1>
 
     {% for item in favorites %}
 
-        <div>
+<div class="favorite-card">
 
-            <h2>{{ item.title }}</h2>
+    <img src="{{ item.image_url }}">
 
-            <p>{{ item.date }}</p>
+<div class="content">
 
-            <img
-                src="{{ item.image_url }}"
-                width="600">
-            
-            <br><br>
+        <h2>{{ item.title }}</h2>
+        <p class="date">{{ item.date }}</p>
+        <p class="description">
+            {{ item.explanation }}
+        </p>
 
-            <a href="/delete_favorite/{{ item.date }}">
-                <button class="delete-btn">
-                    🗑 Delete
-                </button>
-            </a>
+    <a href="/delete_favorite/{{ item.date }}">
+    <button class="delete-btn">
+        <i class="fa-solid fa-trash-can"></i>
+        Remove
+    </button>
+    </a>
 
-            <hr>
+</div>
+</div>
 
-        </div>
 
-        <hr>
 
     {% endfor %}
 

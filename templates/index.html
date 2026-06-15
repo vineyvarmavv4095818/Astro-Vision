@@ -64,6 +64,7 @@
         <input type="hidden" name="title" value="{{ title }}">
         <input type="hidden" name="date" value="{{ date }}">
         <input type="hidden" name="image_url" value="{{ image_url }}">
+        <input type="hidden" name="explanation" value="{{ explanation }}">
 
         <button type="submit" class="add-fav">
             ❤️ Add to Favorites
@@ -118,6 +119,16 @@ function showLoader() {
     document.getElementById("loader").style.display = "block";
 }
 </script>
+
+<div class="fact-box">
+
+    <h3>
+        <i class="fa-solid fa-meteor"></i>
+        Space Fact
+    </h3>
+    <p>{{ space_fact }}</p>
+
+</div>
 
 </body>
 </html>

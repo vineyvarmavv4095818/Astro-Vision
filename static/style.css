@@ -170,3 +170,27 @@ button:hover {
     font-family: serif;
     font-weight: 700;
 }
+
+.fact-box{
+    width: 80%;
+    margin: 25px auto;
+    padding: 15px;
+    border-radius: 15px;
+    background: rgba(199, 8, 8, 0.048);
+    backdrop-filter: blur(10px);
+    color: rgb(212, 212, 212);
+    font-size: 20px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(255,255,255,0.1);
+}
+
+.fact-box h3{
+    color: #ffac11;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size:25px
+}
+
+.fact-box p {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
