@@ -22,9 +22,17 @@
     
     <div class="DSR-butt">
     <form method="POST">
-    <input type="date" name="date" class="date">
-    <button type="submit" class="search">
-        Search
+    <input
+        type="date"
+        name="date"
+        class="date"
+        min="1995-06-16"
+        max="{{ today }}"
+        required
+    >
+
+    <button type="submit" class="Find">
+        Find APOD
     </button>
     </form>
 
@@ -36,6 +44,37 @@
     </a>
 
     </div>
+
+<div>
+    <form action="/search">
+        <input
+    type="text"
+    name="keyword"
+    list="space-keywords"
+    class="Search_bar"
+    placeholder="Search Space Topics...">
+
+<datalist id="space-keywords">
+
+    <option value="Mars">
+    <option value="Moon">
+    <option value="Galaxy">
+    <option value="Nebula">
+    <option value="Black Hole">
+    <option value="Saturn">
+    <option value="Jupiter">
+    <option value="Earth">
+    <option value="Solar System">
+    <option value="SpaceCrafts">
+    <option value="Telescopes">
+
+</datalist>
+
+    <button type="submit" class="Search">
+    Search
+    </button>
+    </form>
+</div>
 
         <h1 class="pic_name">{{ title }}</h1>
 
@@ -65,6 +104,7 @@
         <input type="hidden" name="date" value="{{ date }}">
         <input type="hidden" name="image_url" value="{{ image_url }}">
         <input type="hidden" name="explanation" value="{{ explanation }}">
+        <input type="hidden" name="media_type" value="{{ media_type }}">
 
         <button type="submit" class="add-fav">
             ❤️ Add to Favorites
@@ -103,28 +143,16 @@
         </a>
 
     </div>
-
-    {% if hdurl %}
-    <a href="{{ hdurl }}" target="_blank">
-    <button class="download-button">
-        <i class="fa-solid fa-download"></i>
-        Download HD Image
-    </button>
-    </a>
-    {% endif %}
 </div>
 
-<script>
-function showLoader() {
-    document.getElementById("loader").style.display = "block";
-}
-</script>
+
 
 <div class="fact-box">
 
     <h3>
-        <i class="fa-solid fa-meteor"></i>
-        Space Fact
+        <!-- <i class="fa-solid fa-meteor"></i> -->
+        <i class="fa-solid fa-star"></i>
+        Did you know?
     </h3>
     <p>{{ space_fact }}</p>
 

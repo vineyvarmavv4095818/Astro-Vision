@@ -13,7 +13,20 @@
 
 <div class="favorite-card">
 
+    {% if item.media_type == "image" %}
+
     <img src="{{ item.image_url }}">
+
+{% else %}
+
+    <iframe
+        src="{{ item.image_url }}"
+        width="500"
+        height="300"
+        allowfullscreen>
+    </iframe>
+
+{% endif %}
 
 <div class="content">
 

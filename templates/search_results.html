@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='result.css') }}">
+</head>
+<body>
+    <h1>Results for "{{ keyword }}"</h1>
+{% if results %}
+
+    {% for item in results %}
+
+        <div class="result-card">
+            <img src="{{ item.image }}">
+            <h3>{{ item.title }}</h3>
+        </div>
+
+    {% endfor %}
+
+{% else %}
+
+    <h2>No results found.</h2>
+
+{% endif %}
+</body>
+</html>

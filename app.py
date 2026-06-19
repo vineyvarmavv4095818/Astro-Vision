@@ -73,6 +73,18 @@ SPACE_FACTS = [
 
 ]
 
+SEARCH_MAPPING = {
+
+    "mars":"mars planet",
+    "moon":"moon surface",
+    "saturn":"saturn planet",
+    "jupiter":"jupiter planet",
+    "earth":"earth from space",
+    "sun":"sun nasa",
+    "galaxy":"spiral galaxy",
+    "nebula":"nebula"
+}
+
 @app.route('/', methods=['GET', 'POST'])
 def home():
 
@@ -146,7 +158,8 @@ def favorite():
         "title": request.form["title"],
         "date": request.form["date"],
         "image_url": request.form["image_url"],
-        "explanation": request.form["explanation"]
+        "explanation": request.form["explanation"],
+        "media_type": request.form["media_type"]
     }
 
     with open("favorites.json", "r") as f:
@@ -196,6 +209,45 @@ def delete_favorite(date):
         json.dump(favorites, f, indent=4)
 
     return redirect("/favorites")
+
+@app.route('/search')
+def search():
+
+    keyword = request.args.get("keyword", "").lower()
+    query = SEARCH_MAPPING.get(keyword, keyword)
+    url = f"https://images-api.nasa.gov/search?q={query}&media_type=image"
+
+    response = requests.get(url)
+
+    data = response.json()
+
+    results = []
+
+    items = data["collection"]["items"]
+
+    for item in items[:10]:
+
+        try:
+
+            title = item["data"][0]["title"]
+
+            image = item["links"][0]["href"]
+
+            results.append({
+                "title": title,
+                "image": image
+            })
+
+        except:
+            continue
+
+    return render_template(
+        "search_results.html",
+        keyword=keyword,
+        results=results
+    )
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)

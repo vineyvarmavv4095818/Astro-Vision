@@ -1,0 +1,30 @@
+body {
+    background:linear-gradient(135deg,
+        #16193a,
+        #16193a,
+        #202843,
+        #2c3464);
+    text-align: center;
+}
+h1 {
+    font-size: 50px;
+    margin-bottom: 70px;
+    background: linear-gradient(90deg, #00E5FF, #8A2BE2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h3 {
+    font-size: 20px;
+    margin: 15px 0px 40px;
+    color:rgb(196, 195, 195);
+}
+img {
+    width: 40%;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.result-card {
+    display: block;
+}
