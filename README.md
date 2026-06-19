@@ -14,6 +14,7 @@ A Flask-based web application that displays NASA's Astronomy Picture of the Day 
 * 🗑 Delete Favorites
 * 🔍 Search Space topics
 * 🎥 Video Support
+* 🔭 JWST Images
 
 ## Tech Stack
 
