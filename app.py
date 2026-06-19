@@ -247,6 +247,68 @@ def search():
         results=results
     )
 
+@app.route('/jwst')
+def jwst():
+
+    jwst_images = [
+
+        {
+            "title": "Cosmic Cliffs",
+            "image": "/static/jwst/cosmic_cliffs.jpg"
+        },
+
+        {
+            "title": "Pillars of Creation",
+            "image": "/static/jwst/pillars.jpg"
+        },
+
+        {
+            "title": "Cartwheel Galaxy",
+            "image": "/static/jwst/cartwheel.jpg"
+        },
+
+        {
+            "title": "Southern Ring Nebula",
+            "image": "/static/jwst/southern_ring.jpg"
+        },
+
+        {
+            "title": "Stephan's Quintet",
+            "image": "/static/jwst/stephans.jpg"
+        },
+
+        {
+            "title": "Phantom Galaxy",
+            "image": "/static/jwst/phantom.jpg"
+        },
+
+        {
+            "title": "Messier 64 (Webb + Hubble)",
+            "image": "/static/jwst/Messier64.jpg"
+        },
+
+        {
+            "title": "Messier 58",
+            "image": "/static/jwst/Messier58.jpg"
+        },
+
+        {
+            "title": "Messier 77 (MIRI + NIRCam)",
+            "image": "/static/jwst/Messier77.jpg"
+        },
+
+        {
+            "title": "Westerlund 2 (Chandra + Webb)",
+            "image": "/static/jwst/Westerlund2.jpg"
+        },
+
+    ]
+
+    return render_template(
+        "jwst.html",
+        images=jwst_images
+    )
+
 
 
 if __name__ == '__main__':

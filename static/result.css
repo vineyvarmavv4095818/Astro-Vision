@@ -22,9 +22,29 @@ h3 {
 img {
     width: 40%;
     border-radius: 15px;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
 }
 
-.result-card {
-    display: block;
+.results {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:30px;
+}
+
+.card{
+    width:450px;
+    padding:15px;
+    border-radius:20px;
+    background:rgba(255, 255, 255, 0.3);
+    backdrop-filter:blur(10px);
+}
+
+.card img{
+    width:100%;
+    border-radius:15px;
+}
+
+.card img:hover{
+    transform:scale(1.03);
+    transition:.3s;
 }
