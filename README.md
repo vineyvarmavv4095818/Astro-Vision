@@ -12,7 +12,7 @@ A Flask-based web application that displays NASA's Astronomy Picture of the Day 
 * ❤️ Add to Favorites
 * ⭐ My Favorites Page
 * 🗑 Delete Favorites
-* 📥 HD Image Download
+* 🔍 Search Space topics
 * 🎥 Video Support
 
 ## Tech Stack
@@ -50,7 +50,6 @@ http://127.0.0.1:5000
 * Mars Rover Photos
 * Responsive Design
 * Better UI
-* Space Facts
 * User Authentication
 
 ## Author
