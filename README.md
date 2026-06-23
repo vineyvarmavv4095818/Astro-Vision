@@ -1,4 +1,4 @@
-# 🚀 NASA APOD Explorer
+# 🚀Astro-Vision
 
 A Flask-based web application that displays NASA's Astronomy Picture of the Day (APOD).
 
