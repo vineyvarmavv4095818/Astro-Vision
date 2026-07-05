@@ -40,5 +40,19 @@
         "image_url": "https://apod.nasa.gov/apod/image/1908/NGC1499_mosaic1024.jpg",
         "explanation": "Drifting through the Orion Arm of the spiral Milky Way Galaxy, this cosmic cloud by chance echoes the outline of California on the west coast of the United States. Our own Sun also lies within the Milky Way's Orion Arm, only about 1,500 light-years from the California Nebula. Also known as NGC 1499, the classic emission nebula is around 100 light-years long. The California Nebula shines with the telltale reddish glow characteristic of hydrogen atoms recombining with long lost electrons. The electrons have been stripped away, ionized by energetic starlight. Most likely providing the energetic starlight that ionizes much of the nebular gas is the bright, hot, bluish star Xi Persei just to the right of the nebula.  A popular target for astrophotographers, this deep California Nebula image is a 6 panel telecopic mosaic and covers a wide field of view. The nebula lies toward the constellation Perseus, not far from the Pleiades.",
         "media_type": "image"
+    },
+    {
+        "title": "Natural Saturn On The Cassini Cruise",
+        "date": "2003-08-17",
+        "image_url": "https://apod.nasa.gov/apod/image/0308/saturn_herhst.jpg",
+        "explanation": "What could you see approaching Saturn aboard an interplanetary cruise ship? Your view would likely resemble this subtly shaded image of the gorgeous ringed gas giant. Processed by the Hubble Heritage project, the picture intentionally avoids overemphasizing color contrasts and presents a natural looking Saturn with cloud bands, storms, nearly edge-on rings, and the small round shadow of the moon Enceladus near the center of the planet's disk. Of course, seats were not available on the only ship currently en route, the Cassini spacecraft. Cassini flew by Jupiter at the turn of the millennium and is scheduled to arrive at Saturn in the year 2004. After an extended cruise to a world 1,400 million kilometers from the Sun, Cassini will tour the Saturnian system, conducting a remote, robotic exploration with software and instruments designed by denizens of planet Earth.",
+        "media_type": "image"
+    },
+    {
+        "title": "A Persistent Electrical Storm on Saturn",
+        "date": "2008-05-05",
+        "image_url": "https://apod.nasa.gov/apod/image/0805/saturnstorm_cassini.jpg",
+        "explanation": "How do large storms evolve on Saturn? On Earth, a hurricane can persist for weeks, while the Great Red Spot on Jupiter has been in existence for over 150 years. On Saturn, a storm system has now set a new endurance record, now being discernable for greater than three months.  Electrical signals were detected from the storm in late November of 2007, while the above image was taken in early March 2008.  The storm has roughly the width of planet Earth.  Planetary scientists hypothesize that the storm runs deep into Saturn's cloud tops.  The above image is shown in exaggerated colors combining violet and green light with light normally too red for humans to see. Visible on the upper right are shadows of Saturn's expansive ring system.  Careful inspection will reveal Saturn's small moon Janus just below a ring shadow.  Understanding weather on other planets helps atmospheric scientists better understand our Earth's weather.  Observers of our Solar System's huge ringed world will be tracking the storm to see how it evolves and how long it will ultimately last.",
+        "media_type": "image"
     }
 ]

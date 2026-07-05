@@ -254,52 +254,98 @@ def jwst():
 
         {
             "title": "Cosmic Cliffs",
-            "image": "/static/jwst/cosmic_cliffs.jpg"
+            "image": "/static/jwst/cosmic_cliffs.jpg",
+            "description":"Captured by the James Webb Space Telescope in July 2022, this image reveals a star-forming region in the Carina Nebula. The towering clouds of gas and dust resemble cosmic mountains and are located about 7,600 light-years from Earth. Webb's infrared instruments uncovered details previously hidden from view."
         },
 
         {
             "title": "Pillars of Creation",
-            "image": "/static/jwst/pillars.jpg"
+            "image": "/static/jwst/pillars.jpg",
+            "description":"Released in October 2022, Webb captured this iconic region inside the Eagle Nebula. These giant pillars of gas and dust are stellar nurseries where new stars are continuously forming. The image showcases Webb's ability to peer through thick interstellar dust using infrared light."
         },
 
         {
             "title": "Cartwheel Galaxy",
-            "image": "/static/jwst/cartwheel.jpg"
+            "image": "/static/jwst/cartwheel.jpg",
+            "description":"Observed by JWST in 2022, the Cartwheel Galaxy lies approximately 500 million light-years away in the Sculptor constellation. Its unusual ring-like structure was created by a collision with another galaxy. Webb revealed unprecedented details of star formation within the galaxy."
         },
 
         {
             "title": "Southern Ring Nebula",
-            "image": "/static/jwst/southern_ring.jpg"
+            "image": "/static/jwst/southern_ring.jpg",
+            "description":"Released in July 2022, this planetary nebula is located about 2,500 light-years from Earth. It was formed when a dying star expelled its outer layers into space. Webb's observations uncovered a faint companion star hidden within the nebula."
         },
 
         {
             "title": "Stephan's Quintet",
-            "image": "/static/jwst/stephans.jpg"
+            "image": "/static/jwst/stephans.jpg",
+            "description":"This spectacular image, released in July 2022, depicts five galaxies appearing close together in the constellation Pegasus. Four of the galaxies are gravitationally interacting, triggering bursts of star formation. It is one of the largest images ever produced by JWST."
         },
 
         {
             "title": "Phantom Galaxy",
-            "image": "/static/jwst/phantom.jpg"
+            "image": "/static/jwst/phantom.jpg",
+            "description":"Captured by JWST in 2022, the Phantom Galaxy (M74) is located about 32 million light-years away in the constellation Pisces. Its well-defined spiral arms contain regions of active star formation. Webb's infrared capabilities revealed intricate structures of gas and dust throughout the galaxy."
         },
 
         {
             "title": "Messier 64 (Webb + Hubble)",
-            "image": "/static/jwst/Messier64.jpg"
+            "image": "/static/jwst/Messier64.jpg",
+            "description":"Messier 64, also known as the Black Eye Galaxy, is a spiral galaxy located about 17 million light-years away in the constellation Coma Berenices. It is famous for its prominent dark dust band near its bright core, giving it the appearance of a black eye. JWST observations provide detailed views of its dust structures and regions of active star formation."
         },
 
         {
             "title": "Messier 58",
-            "image": "/static/jwst/Messier58.jpg"
+            "image": "/static/jwst/Messier58.jpg",
+            "description":"Messier 58 is a barred spiral galaxy situated approximately 62 million light-years from Earth in the Virgo Cluster. It was discovered by Charles Messier in 1779 and is one of the brightest galaxies in the cluster. High-resolution observations reveal intricate spiral arms, interstellar dust, and young star-forming regions."
         },
 
         {
             "title": "Messier 77 (MIRI + NIRCam)",
-            "image": "/static/jwst/Messier77.jpg"
+            "image": "/static/jwst/Messier77.jpg",
+            "description":"Messier 77 is an active spiral galaxy located about 47 million light-years away in the constellation Cetus. It hosts a supermassive black hole at its center, making it one of the best-studied Seyfert galaxies. Infrared observations help astronomers peer through thick dust clouds surrounding its energetic nucleus."
         },
 
         {
             "title": "Westerlund 2 (Chandra + Webb)",
-            "image": "/static/jwst/Westerlund2.jpg"
+            "image": "/static/jwst/Westerlund2.jpg",
+            "description":"Westerlund 2 is a young and massive star cluster located roughly 20,000 light-years from Earth in the constellation Carina. It contains some of the hottest, brightest, and most massive stars known. Infrared images reveal newborn stars and glowing gas clouds hidden behind dense cosmic dust."
+        },
+
+        {
+            "title": "Jupiter and Europa",
+            "image": "/static/jwst/img1.jpg",
+            "description":"This latest image of Jupiter, taken by the NASA/ESA Hubble Space Telescope on 25 August 2020, was captured when the planet was 653 million kilometres from Earth. Hubble’s sharp view is giving researchers an updated weather report on the monster planet’s turbulent atmosphere, including a remarkable new storm brewing, and a cousin of the Great Red Spot changing colour — again. The new image also features Jupiter’s icy moon Europa."
+        },
+
+        {
+            "title": "The Bubble Nebula",
+            "image": "/static/jwst/img2.jpg",
+            "description":"The Bubble Nebula, also known as NGC 7635, is an emission nebula located 8 000 light-years away. This stunning new image was observed by the NASA/ESA Hubble Space Telescope to celebrate its 26th year in space."
+        },
+
+        {
+            "title": "Hubble mosaic of the majestic Sombrero Galaxy",
+            "image": "/static/jwst/img3.jpg",
+            "description":"NASA/ESA Hubble Space Telescope has trained its razor-sharp eye on one of the universe's most stately and photogenic galaxies, the Sombrero galaxy, Messier 104 (M104). The galaxy's hallmark is a brilliant white, bulbous core encircled by the thick dust lanes comprising the spiral structure of the galaxy. As seen from Earth, the galaxy is tilted nearly edge-on. We view it from just six degrees north of its equatorial plane. This brilliant galaxy was named the Sombrero because of its resemblance to the broad rim and high-topped Mexican hat."
+        },
+
+        {
+            "title": "Saturn Portrait by hubble",
+            "image": "/static/jwst/img4.jpg",
+            "description":"The NASA/ESA Hubble Space Telescope’s Wide Field Camera 3 observed Saturn on 20 June 2019 as the planet made its closest approach to Earth this year, at approximately 1.36 billion kilometres away."
+        },
+
+        {
+            "title": "lastest saturn Portrait by JWST",
+            "image": "/static/jwst/saturnJWST.png",
+            "description":"Webb teamed up with NASA’s Hubble Space Telescope, observing the ringed planet in complementary wavelengths of light to give us a richer, more layered understanding of its atmosphere. The Hubble image is available in the feature linked below."
+        },
+
+        {
+            "title": "(Webb + Hubble, Side-by-side)",
+            "image": "/static/jwst/hubbWebb.png",
+            "description":"Webb teamed up with NASA’s Hubble Space Telescope, observing Saturn in complementary wavelengths of light to give us a richer, more layered understanding of its atmosphere. These images were each captured in 2024, just 14 weeks apart from each other."
         },
 
     ]

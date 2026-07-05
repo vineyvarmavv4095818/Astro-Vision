@@ -11,17 +11,21 @@
 
     <h1>
         <i class="fa-solid fa-crosshairs"></i>
-        James Webb Gallery</h1>
+        Deep Space Gallery</h1>
 
 <div class="gallery">
 
 {% for item in images %}
 
-    <div class="card">  
+    <div class="card">
+
+    <h3>{{ item.title }}</h3>
 
     <img src="{{ item.image }}">
 
-    <h3>{{ item.title }}</h3>
+    <p class="description">
+    {{ item.description }}
+    </p>
 
     </div>
 
@@ -31,8 +35,5 @@
 
 <br>
 
-<p>
-    Captured by NASA's James Web Space Telescope🔭
-</p>
 </body>
 </html>

@@ -10,96 +10,82 @@
 </head>
 <body>
 
-<div id="loader" class="loader"></div>
-
-<div class="container">
-        <h1 class="app_name">
-            <i class="fa-solid fa-rocket"></i>
-            AstroVision</h1>
-        <p class="subtitle">
-            🚀Explore NASA's Daily Astronomy Pictures
+    <div class="top-box">
+        <div>
+            <i class="fa-solid fa-rocket" style="color:rgb(199, 0, 199); font-size: 30px;"></i>
+            <span class="app-name">AstroVision</span>
+        <p>
+            Explore NASA's Daily Astronomy Pictures
         </p>
-    
-    <div class="DSR-butt">
-    <form method="POST">
-    <input
-        type="date"
-        name="date"
-        class="date"
-        min="1995-06-16"
-        max="{{ today }}"
-        required
-    >
+        </div>
 
-    <button type="submit" class="Find">
-        Find APOD
-    </button>
-    </form>
-
-    <a href="/random">
-        <button class="random_button">
-            <i class="fa-solid fa-shuffle"></i>
-            Random APOD
-        </button>
-    </a>
-
-    </div>
-
-<div>
-    <form action="/search">
+        <div class="search-box">
+        <form action="/search">
         <input
-    type="text"
-    name="keyword"
-    list="space-keywords"
-    class="Search_bar"
-    placeholder="Search Space Topics...">
+            type="text"
+            name="keyword"
+            list="space-keywords"
+            class="Search_bar"
+            placeholder="Search Space Topics...">
 
-<datalist id="space-keywords">
+        <datalist id="space-keywords">
+            <option value="Mars">
+            <option value="Moon">
+            <option value="Galaxy">
+            <option value="Nebula">
+            <option value="Black Hole">
+            <option value="Saturn">
+            <option value="Jupiter">
+            <option value="Earth">
+            <option value="Solar System">
+            <option value="Stars">
+            <option value="Sun">
+        </datalist>
 
-    <option value="Mars">
-    <option value="Moon">
-    <option value="Galaxy">
-    <option value="Nebula">
-    <option value="Black Hole">
-    <option value="Saturn">
-    <option value="Jupiter">
-    <option value="Earth">
-    <option value="Solar System">
-    <option value="SpaceCrafts">
-    <option value="Telescopes">
+            <button type="submit" class="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+        </div>
 
-</datalist>
+        <div>
 
-    <button type="submit" class="Search">
-    Search
-    </button>
-    </form>
+        <form method="POST" >
+            <input
+            type="date"
+            name="date"
+            class="date"
+            min="1995-06-16"
+            max="{{ today }}"
+            required>
+            <button type="submit" class="find">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                Find
+            </button>
+        </form>
+        </div>
+        </div>
+
 </div>
 
-        <h1 class="pic_name">{{ title }}</h1>
+        
+    </div>
 
-    <p class="p1">{{ date }}</p>
+<div class="container">
 
-    {% if media_type == "image" %}
-
-        <img src="{{ image_url }}" alt="NASA Image">
-
-    {% else %}
-
-        <iframe
-            width="800"
-            height="450"
-            src="{{ image_url }}"
-            frameborder="0"
-            allowfullscreen>
-        </iframe>
-
-    {% endif %}
+<div class="sidebar">
     
-    <div class="fav">
+    <a href="/">
+        <i class="fa-solid fa-house" style="margin-right: 7px;"></i>
+        Home
+    </a>
 
-        <form action="/favorite" method="POST">
+    <a href="/random">
+        
+            <i class="fa-solid fa-shuffle" style="color: chartreuse; margin-right: 7px;"></i>
+            Random APOD
+        
+    </a>
 
+    <form action="/favorite" method="POST" >
         <input type="hidden" name="title" value="{{ title }}">
         <input type="hidden" name="date" value="{{ date }}">
         <input type="hidden" name="image_url" value="{{ image_url }}">
@@ -107,65 +93,107 @@
         <input type="hidden" name="media_type" value="{{ media_type }}">
 
         <button type="submit" class="add-fav">
-            ❤️ Add to Favorites
-        </button>
+            <i class="fa-solid fa-heart" style="color: red; margin-right: 7px;" ></i>
+            Add to Favorites </button>
+    </form>
 
-        </form>
+    <a href="/favorites">
+        
+            <i class="fa-solid fa-star" style="color: yellow; margin-right: 7px;" ></i>
+            Favorites
+        
+    </a>
 
-        <a href="/favorites">
-        <button class="my-fav">
-            <i class="fa-regular fa-star"></i>
-            My Favorites
+    <a href="/jwst">
+        
+            <i class="fa-solid fa-crosshairs" style="color: cornflowerblue; margin-right: 7px;"></i>
+            Telescope Gallery
+        
+    </a>
+
+    <a href="/favorites">
+        
+            <i class="fa-regular fa-trash-can" style="color: rgb(218, 82, 82); margin-right: 7px;" ></i>
+            Delete favorites
+        
+    </a>
+
+    <a href="/?date={{ previous_date }}">
+        
+            <i class="fa-solid fa-caret-left" style="color: chocolate; margin-right: 7px;"></i>
+            Previous Day
+        
+    </a>
+
+    <a href="/?date={{ next_date }}">
+        
+            <i class="fa-solid fa-caret-right" style="color: chocolate; margin-right: 7px;"></i>
+            Next Day
+        
+    </a>
+</div>
+
+
+<div class="main-content">
+
+
+    <!-- left side -->
+    <div class="main1">
+        <p class="pic-name">{{ title }}</p>
+
+        <div class="p">
+            <div class="p1">
+                <i class="fa-regular fa-calendar"></i>
+            {{ date }}</div>
+
+            <form action="/favorite" method="POST" >
+        <input type="hidden" name="title" value="{{ title }}">
+        <input type="hidden" name="date" value="{{ date }}">
+        <input type="hidden" name="image_url" value="{{ image_url }}">
+        <input type="hidden" name="explanation" value="{{ explanation }}">
+        <input type="hidden" name="media_type" value="{{ media_type }}">
+
+        <button type="submit" class="add-fav-main">
+            Add to Favorites
+            <i class="fa-solid fa-heart" style="color: red; margin-right: 7px;" ></i>
         </button>
-        </a>
+    </form>
+        </div>
+
+        <p class="p2">{{ explanation[:300] }}...</p>
+
+        
 
     </div>
 
     
-
-    <p class="p2">{{ explanation }}</p>
-
-    <div class="buttons">
-
-        <a href="/?date={{ previous_date }}">
-        <button class="b1">
-            <i class="fa-solid fa-caret-left"></i>
-            Previous Day
-        </button>
-        </a>
-        
-        
-
-        <a href="/?date={{ next_date }}">
-        <button class="b1">
-            Next Day
-            <i class="fa-solid fa-caret-right"></i>
-        </button>
-        </a>
+        <div class="main2">
+            {% if media_type == "image" %}
+                <img src="{{ image_url }}" alt="NASA Image">
+            {% else %}
+            <iframe
+                width="800"
+                height="450"
+                src="{{ image_url }}"
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
+            {% endif %}
+        </div>
+    
 
     </div>
-
-<a href="/jwst">
-
-<button class="jwst-butt">
-    <i class="fa-solid fa-crosshairs"></i>
-    JWST Gallery
-</button>
-
-</a>
-</div>
-
 
 
 <div class="fact-box">
 
     <h3>
-        <!-- <i class="fa-solid fa-meteor"></i> -->
         <i class="fa-solid fa-star"></i>
         Did you know?
     </h3>
     <p>{{ space_fact }}</p>
 
+</div>
 </div>
 
 
