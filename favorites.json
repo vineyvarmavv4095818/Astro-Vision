@@ -54,5 +54,26 @@
         "image_url": "https://apod.nasa.gov/apod/image/0805/saturnstorm_cassini.jpg",
         "explanation": "How do large storms evolve on Saturn? On Earth, a hurricane can persist for weeks, while the Great Red Spot on Jupiter has been in existence for over 150 years. On Saturn, a storm system has now set a new endurance record, now being discernable for greater than three months.  Electrical signals were detected from the storm in late November of 2007, while the above image was taken in early March 2008.  The storm has roughly the width of planet Earth.  Planetary scientists hypothesize that the storm runs deep into Saturn's cloud tops.  The above image is shown in exaggerated colors combining violet and green light with light normally too red for humans to see. Visible on the upper right are shadows of Saturn's expansive ring system.  Careful inspection will reveal Saturn's small moon Janus just below a ring shadow.  Understanding weather on other planets helps atmospheric scientists better understand our Earth's weather.  Observers of our Solar System's huge ringed world will be tracking the storm to see how it evolves and how long it will ultimately last.",
         "media_type": "image"
+    },
+    {
+        "title": "Charon: Moon of Pluto",
+        "date": "2018-07-06",
+        "image_url": "https://apod.nasa.gov/apod/image/1807/charon_then_now_1024.jpg",
+        "explanation": "A darkened and mysterious north polar region known to some as Mordor Macula caps this premier high-resolution view. The portrait of Charon, Pluto's largest moon, was captured by New Horizons near the spacecraft's closest approach on July 14, 2015. The combined blue, red, and infrared data was processed to enhance colors and follow variations in Charon's surface properties with a resolution of about 2.9 kilometers (1.8 miles). A stunning image of Charon's Pluto-facing hemisphere, it also features a clear view of an apparently moon-girdling belt of fractures and canyons that seems to separate smooth southern plains from varied northern terrain. Charon is 1,214 kilometers (754 miles) across. That's about 1/10th the size of planet Earth but a whopping 1/2 the diameter of Pluto itself, and makes it the largest satellite relative to its parent body in the Solar System. Still, the moon appears as a small bump at about the 1 o'clock position on Pluto's disk in the grainy, negative,telescopic picture inset at upper left. That view was used by James Christy and Robert Harrington at the U.S. Naval Observatory in Flagstaff to discover Charon 40 years ago in June of 1978.",
+        "media_type": "image"
+    },
+    {
+        "title": "Cooling Neutron Star",
+        "date": "2011-03-05",
+        "image_url": "https://apod.nasa.gov/apod/image/1103/casa_main.jpg",
+        "explanation": "Supernova remnant Cassiopeia A (Cas A) is a comfortable 11,000 light-years away. Light from the Cas A supernova, the death explosion of a massive star, first reached Earth just 330 years ago.  The expanding debris cloud spans about 15 light-years in this composite X-ray/optical image, while the bright source near the center is a neutron star (inset illustration) the incredibly dense, collapsed remains of the stellar core. Still hot enough to emit X-rays, Cas A's neutron star is cooling. In fact, 10 years of observations with the orbiting Chandra X-ray observatory find that the neutron star is cooling rapidly, so rapidly that researchers suspect a large part of the neutron star's core is forming a frictionless neutron superfluid. The Chandra results represent the first observational evidence for this bizarre state of neutron matter.",
+        "media_type": "image"
+    },
+    {
+        "title": "A Sky Full Of Hydrogen",
+        "date": "2001-01-13",
+        "image_url": "https://apod.nasa.gov/apod/image/0101/nHI_alt_skyview_big.jpg",
+        "explanation": "Interstellar space is filled with extremely tenuous clouds of gas which are mostly Hydrogen. The neutral Hydrogen atom (HI in astronomer's shorthand) consists of 1 proton and 1 electron. The proton and electron spin like tops but can have only two orientations; spin axes parallel or anti-parallel. It is a rare event for Hydrogen atoms in the interstellar medium to switch from the parallel to the anti-parallel configuration, but when they do they emit radio waves with a wavelength of 21 centimeters (about 8 inches) and a corresponding frequency of exactly 1420 MHz. Tuned to this frequency radio telescopes have mapped the neutral Hydrogen in the sky. The above image represents such an all-sky HI survey with the plane of our Milky Way Galaxy running horizontally through the center. In this false color image no stars are visible, just diffuse clouds of gas tens to hundreds of light years across which cluster near the plane. The gas clouds seem to form arching, looping structures, stirred up by stellar activity in the galactic disk.",
+        "media_type": "image"
     }
 ]

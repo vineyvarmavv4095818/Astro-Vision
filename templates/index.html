@@ -162,36 +162,33 @@
 
         <p class="p2">{{ explanation[:300] }}...</p>
 
-        
+
 
     </div>
 
-    
-        <div class="main2">
-            {% if media_type == "image" %}
-                <img src="{{ image_url }}" alt="NASA Image">
-            {% else %}
-            <iframe
-                width="800"
-                height="450"
-                src="{{ image_url }}"
-                frameborder="0"
-                allowfullscreen>
-            </iframe>
-            {% endif %}
-        </div>
-    
+    {% if media_type == "image" %}
+        <img src="{{ image_url }}" alt="NASA Image" class="media">
+    {% else %}
+        <iframe
+            src="{{ image_url }}"
+            frameborder="0"
+            allowfullscreen>
+        </iframe>
+    {% endif %}
+
 
     </div>
 
 
-<div class="fact-box">
+<div class="lower-box">
 
-    <h3>
-        <i class="fa-solid fa-star"></i>
-        Did you know?
-    </h3>
-    <p>{{ space_fact }}</p>
+    <div class="fact">
+        <h3>
+            <i class="fa-solid fa-star"></i>
+            Did you know?
+        </h3>
+        <p>{{ space_fact }}</p>
+    </div>
 
 </div>
 </div>

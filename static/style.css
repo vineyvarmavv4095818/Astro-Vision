@@ -1,5 +1,5 @@
 body{
-    background-image: url("Space_background.jpg");
+    background-image: url("imgdark.png");
     background-size: contain;
     color: white;
 }
@@ -11,7 +11,8 @@ body{
 
 .sidebar{
 
-    background:#040616;
+    /* background:linear-gradient(135deg,  #17153B, #2E236C, 433D8B); */
+    /* box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.2); */
 
     padding:20px;
 
@@ -31,11 +32,12 @@ body{
     /* bottom: 100px; */
     width:240px;
 
-    height:600px;
+    height:611px;
 
-    border: 1px solid rgba(187, 73, 187, 0.4);
+    border: 1px solid rgba(189, 133, 189, 0.4);
 
     border-radius: 15px;
+    box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.3);
 
 }
 
@@ -62,7 +64,7 @@ body{
 .sidebar a:hover,
 .sidebar form:hover{
 
-    background:linear-gradient(90deg, rgb(198, 75, 255), #761ab3, #5e1e88);
+    background:linear-gradient(90deg, rgb(116, 24, 158), #3f145c);
 
     color:white;
 
@@ -86,15 +88,7 @@ body{
 
 }
 
-.fact-box {
-    margin-left:265px;
-    background-color: #040616;
 
-
-    border: 1px solid rgba(187, 73, 187, 0.4);
-
-    border-radius: 15px;
-}
 
 .main-content{
 
@@ -110,23 +104,28 @@ body{
 
     display: flex;
 
-    background-color: #040616;
+    
     /* margin-right: 90px; */
 
-    border: 1px solid rgba(187, 73, 187, 0.4);
+    border: 1px solid rgba(189, 133, 189, 0.4);
 
     border-radius: 15px;
 
     height: 400px;
+    box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.3);
 
+/* background:linear-gradient(135deg,  #5B8FB9, #301E67, #03001C);    box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.2); */
 
 
 }
 
-.main-content img {
+.media {
     /* width: 600px; */
-    border-radius: 15px;
+    border-radius: 25px;
     height: 400px;
+    object-fit: cover;
+    border: none;
+    box-shadow: 0 10px 30px rgba(172, 172, 172, 0.3);
 }
 
 .p2 {
@@ -149,7 +148,7 @@ body{
     display: flex;
     background-color: rgba(214, 211, 211, 0.2);
     width: 120px;
-    height: 30px;
+    height: 35px;
     justify-content: center;
     align-items: center;
     justify-content: space-evenly;
@@ -164,7 +163,7 @@ body{
 }
 .add-fav-main {
     border: 1px solid rgba(214, 180, 214, 0.3);
-    height: 30px;
+    height: 36px;
     color:rgb(219, 219, 219);
 
     text-decoration:none;
@@ -187,7 +186,8 @@ body{
 
 
 .top-box {
-    background:#040616;
+/* background:linear-gradient(135deg,  #5B8FB9, #301E67, #03001C);
+ box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.2); */
     padding:15px;
     padding-top: 10px;
     display:flex;
@@ -210,8 +210,9 @@ body{
 
     color: white;
     height: 55px;
-    border: 1px solid rgba(187, 73, 187, 0.4);
+    border: 1px solid rgba(189, 133, 189, 0.4);
     border-radius: 15px;
+    box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.3);
 }
 
 .top-box p {
@@ -237,7 +238,9 @@ body{
 .Search_bar {
     width: 450px;
     height: 39px;
-    background-color: #040616c5;
+    background-image: url("imgdark.png");
+    background-size: cover;
+    /* box-shadow: inset 0 0 15px rgba(131, 130, 130, 0.2); */
     border: 1px solid rgba(189, 133, 189, 0.4);
     border-radius: 30px;
     font-size: 17px;
@@ -267,13 +270,15 @@ body{
 .date {
     height: 37px;
     width: 140px;
-    background-color: #070b25c5;
+    background-image: url("imgdark.png");
+    background-size: cover;
     border: 1px solid rgba(189, 133, 189, 0.4);
     border-radius: 13px;
     font-size: 17px;
-    color: #9667b6;
+    color: #919092;
     font-family: sans-serif;
     cursor: pointer;
+    padding-left: 10px;
 }
 
 
@@ -304,7 +309,12 @@ body{
     transform: scale(1.05);
 }
 
-/* .third-box {
-    margin-top: 300px;
-    margin-left:300px;
-} */
+.lower-box {
+    margin-left:265px;
+    margin-top: 2px;
+    /* background:linear-gradient(135deg,  #5B8FB9, #301E67, #03001C); */
+    border: 1px solid rgba(189, 133, 189, 0.4);
+    border-radius: 15px;
+    height: 229px;
+    box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.3);
+}
