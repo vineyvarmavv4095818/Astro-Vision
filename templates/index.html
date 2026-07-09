@@ -80,7 +80,7 @@
 
     <a href="/random">
         
-            <i class="fa-solid fa-shuffle" style="color: chartreuse; margin-right: 7px;"></i>
+            <i class="fa-solid fa-shuffle" style=" margin-right: 7px;"></i>
             Random APOD
         
     </a>
@@ -160,7 +160,7 @@
     </form>
         </div>
 
-        <p class="p2">{{ explanation[:300] }}...</p>
+        <p class="p2">{{ explanation[:400] }}...</p>
 
 
 
@@ -180,17 +180,58 @@
     </div>
 
 
-<div class="lower-box">
+
+
+    <div class="lwr-butt">
+
+        <div class="lwr-random">
+            <a href="/random">
+                
+                <h6>
+                    <i class="fa-solid fa-shuffle" style="color: chartreuse; "></i>
+                    Random APOD</h6>
+                <p>Discover a random astronomy image</p>
+            </a>
+        </div>
+
+        <div class="lwr-glry">
+            <a href="/jwst">
+                <h6>
+                    <i class="fa-solid fa-image" style="color: cornflowerblue;"></i>
+                    Telescope gallery</h6>
+                <p>Explore images from JWST & Hubble</p>
+            </a>
+        </div>
+
+        <div class="lwr-fav">
+            <a href="/favorites">
+                <h6>
+                    <i class="fa-solid fa-star" style="color: rgb(255, 238, 0); " ></i>
+                    Favorites</h6>
+                <p>View your favorite APODs</p>
+            </a>
+        </div>
+
+        <div class="lwr-dlt">
+            <a href="/favorites">
+                <h6>
+                    <i class="fa-regular fa-trash-can" style="color: rgb(218, 82, 82);" ></i>
+                    Delete favorites</h6>
+                <p>Manage your favorites</p>
+            </a>
+        </div>
+
+    </div>
 
     <div class="fact">
-        <h3>
-            <i class="fa-solid fa-star"></i>
-            Did you know?
-        </h3>
+        <h4>
+            <i class="fa-solid fa-star" style="color: yellow;"></i>
+            Astro-Fact!
+        </h4>
         <p>{{ space_fact }}</p>
     </div>
 
-</div>
+
 </div>
 
 
