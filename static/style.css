@@ -120,7 +120,7 @@ body{
 
 }
 
-.media {
+#media {
     /* width: 600px; */
     border-radius: 25px;
     height: 400px;
@@ -128,9 +128,10 @@ body{
     border: none;
     /* box-shadow: 0 10px 30px rgba(172, 172, 172, 0.3); */
 }
-.media:hover{
+#media:hover{
     transition:.3s;
     transform: scale(1.01);
+    cursor: pointer;
 }
 
 .p2 {
@@ -321,7 +322,7 @@ body{
     position: absolute;
     right: 5px;
     height: 150px;
-    width: 400px;
+    width: 395px;
     border: 1px solid rgba(189, 133, 189, 0.4);
     border-radius: 15px;
     margin-left: 10px;
@@ -473,4 +474,54 @@ body{
 .lwr-fav:hover{
     transition:.3s;
     transform: scale(1.03);
+}
+
+.modal{
+
+    display:none;
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:100%;
+
+    background:rgba(0,0,0,.9);
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:1000;
+
+}
+
+.modal img{
+
+    max-width:90%;
+
+    max-height:90%;
+
+    border-radius:15px;
+
+}
+
+.close{
+
+    position:absolute;
+
+    top:20px;
+
+    right:40px;
+
+    font-size:45px;
+
+    color:white;
+
+    cursor:pointer;
+
 }

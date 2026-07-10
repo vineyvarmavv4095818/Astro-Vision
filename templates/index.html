@@ -160,14 +160,14 @@
     </form>
         </div>
 
-        <p class="p2">{{ explanation[:400] }}...</p>
+        <p class="p2">{{ explanation[:350] }}...</p>
 
 
 
     </div>
 
     {% if media_type == "image" %}
-        <img src="{{ image_url }}" alt="NASA Image" class="media">
+        <img src="{{ image_url }}" alt="NASA Image" id="media">
     {% else %}
         <iframe
             src="{{ image_url }}"
@@ -234,7 +234,15 @@
 
 </div>
 
+<div id="imageModal" class="modal">
 
+    <span class="close">&times;</span>
+
+    <img id="modalImage">
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
 
 </body>
 </html>
