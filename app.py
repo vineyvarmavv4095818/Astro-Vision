@@ -1,3 +1,4 @@
+import sqlite3
 import json
 import random
 from flask import Flask, render_template, request, redirect
@@ -69,8 +70,6 @@ def home():
     if selected_date:
         url += f"&date={selected_date}"
 
-
-
     response = requests.get(url, timeout=30)
     print("URL:", url)
     print("Status:", response.status_code)
@@ -84,12 +83,8 @@ def home():
         return f"Invalid JSON received:<br>{response.text}"
 
     current_date = datetime.strptime(data["date"], "%Y-%m-%d")
-
     previous_date = (current_date - timedelta(days=1)).strftime("%Y-%m-%d")
-
     next_date = (current_date + timedelta(days=1)).strftime("%Y-%m-%d")
-
-
     random_fact = random.choice(SPACE_FACTS)
     
     return render_template(
@@ -104,6 +99,8 @@ def home():
         next_date=next_date,
         space_fact=random_fact
     )
+
+## Random APODs
 
 @app.route('/random')
 def random_apod():
@@ -122,6 +119,8 @@ def random_apod():
 
     return redirect(f"/?date={random_date}")
 
+## Add to favorites
+
 @app.route('/favorite', methods=['POST'])
 def favorite():
 
@@ -133,53 +132,89 @@ def favorite():
         "media_type": request.form["media_type"]
     }
 
-    with open("favorites.json", "r") as f:
-        favorites = json.load(f)
+    conn = sqlite3.connect("apod.db")
+    cursor = conn.cursor()
 
-    
-        already_exists = False
+    cursor.execute(
+        "SELECT * FROM favorites WHERE date = ?",
+        (item["date"],)
+    )
 
-        for fav in favorites:
+    existing = cursor.fetchone()
 
-            if fav["date"] == item["date"]:
-                already_exists = True
-                break
+    if existing is None:
 
-    if not already_exists:
-        favorites.append(item)
+        cursor.execute(
+            """
+            INSERT INTO favorites
+            (title, date, image_url, explanation, media_type)
 
-    with open("favorites.json", "w") as f:
-        json.dump(favorites, f, indent=4)
+            VALUES (?, ?, ?, ?, ?)
+            """,
+            (
+                item["title"],
+                item["date"],
+                item["image_url"],
+                item["explanation"],
+                item["media_type"]
+            )
+        )
+
+    conn.commit()
+    conn.close()
 
     date = request.form["date"]
     return redirect(f"/?date={date}")
 
+## Favorites
+
 @app.route('/favorites')
 def favorites():
 
-    with open("favorites.json", "r") as f:
-        favorites_list = json.load(f)
+    conn = sqlite3.connect("apod.db")
+    cursor = conn.cursor()
+
+    cursor.execute("SELECT * FROM favorites")
+    favorites = cursor.fetchall()
+    conn.close()
+
+    favorites_list = []
+
+    for row in favorites:
+
+        favorites_list.append({
+
+            "id": row[0],
+            "title": row[1],
+            "date": row[2],
+            "image_url": row[3],
+            "explanation": row[4],
+            "media_type": row[5]
+        })
 
     return render_template(
         "favorites.html",
         favorites=favorites_list
     )
 
+## Detele from favprites
+
 @app.route('/delete_favorite/<date>')
 def delete_favorite(date):
 
-    with open("favorites.json", "r") as f:
-        favorites = json.load(f)
+    conn = sqlite3.connect("apod.db")
+    cursor = conn.cursor()
+    cursor.execute(
+        "DELETE FROM favorites WHERE date = ?",
+        (date,)
+    )
 
-    favorites = [
-        item for item in favorites
-        if item["date"] != date
-    ]
-
-    with open("favorites.json", "w") as f:
-        json.dump(favorites, f, indent=4)
+    conn.commit()
+    conn.close()
 
     return redirect("/favorites")
+
+## Search route
 
 @app.route('/search')
 def search():
@@ -189,21 +224,15 @@ def search():
     url = f"https://images-api.nasa.gov/search?q={query}&media_type=image"
 
     response = requests.get(url)
-
     data = response.json()
-
     results = []
 
     items = data["collection"]["items"]
-
     for item in items[:10]:
 
         try:
-
             title = item["data"][0]["title"]
-
             image = item["links"][0]["href"]
-
             results.append({
                 "title": title,
                 "image": image
@@ -217,6 +246,8 @@ def search():
         keyword=keyword,
         results=results
     )
+
+## Telescope gallery
 
 @app.route('/jwst')
 def jwst():

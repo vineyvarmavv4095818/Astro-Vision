@@ -10,32 +10,17 @@ body{
 }
 
 .sidebar{
-
-    /* background:linear-gradient(135deg,  #17153B, #2E236C, 433D8B); */
-    /* box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.2); */
-
     padding:20px;
-
     padding-left: 2px;
-
     display:flex;
-
     flex-direction:column;
-
     gap:5px;
-
     position:absolute;
-
     left:5px;
-
     top:90px;
-    /* bottom: 100px; */
     width:240px;
-
     height:550px;
-
     border: 1px solid rgba(189, 133, 189, 0.4);
-
     border-radius: 15px;
     box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.4);
 
@@ -43,90 +28,49 @@ body{
 
 .sidebar a,
 .sidebar form{
-
     color:rgb(219, 219, 219);
-
     text-decoration:none;
-
     padding:14px 18px;
-
     border-radius:10px;
-
     transition:.3s;
-
     background: transparent;
-
     display: block;
-
-
 }
 
 .sidebar a:hover,
 .sidebar form:hover{
-
-    /* background:linear-gradient(90deg, rgb(116, 24, 158), #3f145c); */
     background:linear-gradient(45deg,  black, rgb(82, 11, 76), rgb(121, 17, 112));
-
-
     color:white;
-
-
 }
 
 .add-fav {
     background: transparent;
-
     border: none;
-
     cursor: pointer;
-
     color:white;
-
     font-family: 'Times New Roman', Times, serif;
-
     font-size: 16px;
-
     padding: 0px;
-
 }
 
 
 
 .main-content{
-
-
     padding:10px 10px 10px 20px;
-    /* padding-left: 20px; */
-
     margin-left:265px;
-
     margin-top: 90px;
-
-
     display: flex;
-
-    
-    /* margin-right: 90px; */
-
     border: 1px solid rgba(189, 133, 189, 0.4);
-
     border-radius: 15px;
-
     height: 400px;
     box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.4);
-
-/* background:linear-gradient(135deg,  #5B8FB9, #301E67, #03001C);    box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.2); */
-
-
 }
 
 #media {
-    /* width: 600px; */
     border-radius: 25px;
     height: 400px;
     object-fit: cover;
     border: none;
-    /* box-shadow: 0 10px 30px rgba(172, 172, 172, 0.3); */
 }
 #media:hover{
     transition:.3s;
@@ -164,57 +108,35 @@ body{
 .p{
     display: flex;
     align-items: center;
-    /* justify-content: center; */
     gap: 10px;
 }
 .add-fav-main {
     border: 1px solid rgba(214, 180, 214, 0.3);
     height: 36px;
     color:rgb(219, 219, 219);
-
     text-decoration:none;
-
-    /* padding:5px; */
-
     border-radius:10px;
-
     background:linear-gradient(45deg, black, black, rgb(61, 8, 57), rgb(121, 17, 112));
-
-    /* border: none; */
-
     font-size: 18px;
     font-family: 'Times New Roman', Times, serif;
     cursor: pointer;
-
-    /* margin-top: 20px; */
 }
 
 
 
 .top-box {
-/* background:linear-gradient(135deg,  #5B8FB9, #301E67, #03001C);
- box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.2); */
     padding:15px;
     padding-top: 10px;
     display:flex;
-
     flex-direction:row;
-
     align-items: center;
-
     gap:130px;
-
     position:absolute;
-
     left:5px;
-
     right:0;
-
     top:5px;
-
     position: absolute;
     right: 5px;
-
     color: white;
     height: 55px;
     border: 1px solid rgba(189, 133, 189, 0.4);
@@ -232,14 +154,10 @@ body{
     font-size: 30px;
     font-weight: 700;
     margin: 0;
-
     background: linear-gradient(135deg, #a100b6, #ffffff);
-
     -webkit-background-clip: text;
     background-clip: text;
-
     -webkit-text-fill-color: transparent;
-    
 }
 
 .Search_bar {
@@ -247,7 +165,6 @@ body{
     height: 39px;
     background-image: url("imgdark.png");
     background-size: cover;
-    /* box-shadow: inset 0 0 15px rgba(131, 130, 130, 0.2); */
     border: 1px solid rgba(189, 133, 189, 0.4);
     border-radius: 30px;
     font-size: 17px;
@@ -294,25 +211,17 @@ body{
     width: 120px;
     margin-left: 5px;
     font-size: 17px;
-    /* color: white; */
     background:linear-gradient(45deg,black, rgb(134, 16, 119), rgb(121, 17, 112));
     border-radius: 13px;
     cursor: pointer;
-
     color:rgb(219, 219, 219);
-
     text-decoration:none;
-
     border: none;
-
     transition:.3s;
-
     font-family: 'Times New Roman', Times, serif;
-
 }
 
 .find:hover{
-    /* background-color: #00bcd4; */
     transform: scale(1.05);
 }
 
@@ -328,7 +237,6 @@ body{
     margin-left: 10px;
     padding:  0px 20px;
     top: 520px;
-    /* background:linear-gradient(45deg, black, black, rgb(61, 8, 57), rgb(121, 17, 112)); */
     background-image: url('fact2.jpg');
     background-size: cover;
 }
@@ -462,7 +370,6 @@ body{
     transition:.3s;
     transform: scale(1.03);
 }
-
 .lwr-random:hover{
     transition:.3s;
     transform: scale(1.03);
@@ -477,51 +384,29 @@ body{
 }
 
 .modal{
-
     display:none;
-
     position:fixed;
-
     top:0;
-
     left:0;
-
     width:100%;
-
     height:100%;
-
     background:rgba(0,0,0,.9);
-
     justify-content:center;
-
     align-items:center;
-
     z-index:1000;
-
 }
 
 .modal img{
-
     max-width:90%;
-
     max-height:90%;
-
     border-radius:15px;
-
 }
 
 .close{
-
     position:absolute;
-
     top:20px;
-
     right:40px;
-
     font-size:45px;
-
     color:white;
-
     cursor:pointer;
-
 }
