@@ -11,7 +11,7 @@ A Flask-based web application that displays NASA's Astronomy Picture of the Day 
 * 🎲 Random APOD
 * ❤️ Add to Favorites
 * ⭐ My Favorites Page
-* 🗑 Delete Favorites
+*  🗑 Delete Favorites
 * 🔍 Search Space topics
 * 🎥 Video Support
 * 🌌 Deep Space Gallery
@@ -22,8 +22,9 @@ A Flask-based web application that displays NASA's Astronomy Picture of the Day 
 * Flask
 * HTML
 * CSS
+* JavaScript
 * NASA APOD API
-* JSON
+* SQlite
 
 ## Installation
 
