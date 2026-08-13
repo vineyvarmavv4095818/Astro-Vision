@@ -1,14 +1,10 @@
 {% extends "base.html" %}
 
 {% block extra_css %}
-
 <link rel="stylesheet"href="{{ url_for('static', filename='jwst.css') }}">
-
 {% endblock %}
 
 {% block content %}
-
-
 
 <div class="main-glry">
 
@@ -17,22 +13,18 @@
         Telescope gallery
     </h1>
 
-
-
     <div class="grid-glry">
+
         {% for item in images %}
 
         <div class="card">
-
             <h3>{{ item.title }}</h3>
-
             <img src="{{ item.image }}">
-
         </div>
 
-    {% endfor %}
-    </div>
+        {% endfor %}
 
+    </div>
 
 </div>
 
@@ -40,7 +32,6 @@
 
 {% block lower_buttons %}
 {% endblock %}
-
 
 {% block fact %}
 {% endblock %}

@@ -9,8 +9,6 @@ app = Flask(__name__)
 API_KEY = "EWqIN1vhaBmFaOeq2RL3wP5CKbIKBrYBWKYSNhIG"
 
 SPACE_FACTS = [
-
-    
     "The Sun contains about 99.8% of the total mass in our Solar System, making it the dominant gravitational force for every planet.",
     "A day on Venus lasts longer than its entire year because the planet rotates extremely slowly while orbiting the Sun relatively quickly.",
     "Jupiter is the largest planet in our Solar System and could fit more than 1,300 Earth-sized planets inside its enormous volume.",
@@ -19,29 +17,7 @@ SPACE_FACTS = [
     "Neutron stars are so dense that a single teaspoon of their material would weigh billions of tons on Earth.",
     "The Milky Way galaxy contains an estimated 100 to 400 billion stars, along with planets, gas, dust, and dark matter.",
     "Light from the Sun takes about 8 minutes and 20 seconds to reach Earth, traveling nearly 300,000 kilometers every second.",
-    "The International Space Station circles Earth approximately every 90 minutes, allowing astronauts to witness around 16 sunrises and sunsets each day.",
-    "Mars has the tallest volcano in the Solar System, Olympus Mons, standing nearly three times higher than Mount Everest.",
-    "Mercury experiences extreme temperature changes, ranging from scorching daytime heat to freezing nighttime cold because it has almost no atmosphere.",
-    "A black hole's gravity is so strong that nothing, not even light, can escape once it crosses the event horizon.",
-    "Earth's atmosphere protects life by blocking harmful radiation and burning up many meteoroids before they can reach the surface.",
-    "Uranus rotates on its side, making it unique among the planets and causing its seasons to last for more than 20 years.",
-    "The footprints left by Apollo astronauts on the Moon may remain visible for millions of years because there is almost no wind.",
-    "Comets develop glowing tails only when they approach the Sun, causing ice and dust to vaporize and reflect sunlight.",
-    "Pluto was reclassified as a dwarf planet in 2006 because it does not clear other objects from its orbital neighborhood.",
-    "Scientists have discovered thousands of exoplanets orbiting distant stars, increasing the possibility that Earth is not the only habitable world.",
-    "The largest canyon in the Solar System, Valles Marineris on Mars, stretches over 4,000 kilometers across the planet's surface.",
-    "Space is completely silent because sound requires a medium like air or water, and the vacuum of space has neither.",
-    "Earth's magnetic field shields the planet from harmful charged particles released by the Sun during powerful solar storms.",
-    "Some stars shine for only a few million years, while smaller stars can continue producing energy for hundreds of billions of years.",
-    "Astronauts grow slightly taller in space because the absence of gravity allows the spine to expand more than on Earth.",
-    "The James Webb Space Telescope observes distant galaxies using infrared light, helping scientists study the earliest stages of the universe.",
-    "The observable universe is estimated to be about 93 billion light-years across, containing billions of galaxies and countless stars.",
-    "Every atom of oxygen in your body was created inside ancient stars before being scattered across space by powerful stellar explosions.",
-    "Earth's oceans experience tides mainly because of the Moon's gravitational pull, with the Sun also contributing to the tidal effect.",
-    "The hottest planet in the Solar System is Venus, not Mercury, because its thick atmosphere traps heat through a runaway greenhouse effect.",
-    "The first human in space was Yuri Gagarin, who completed a single orbit around Earth on April 12, 1961.",
     "The universe is still expanding, a discovery that changed our understanding of cosmology and suggests galaxies continue moving farther apart over time."
-
 ]
 
 SEARCH_MAPPING = {
@@ -254,8 +230,6 @@ def search():
 def jwst():
 
     jwst_images = [
-
-
         {
             "title": "Pillars of Creation",
             "image": "/static/jwst/pillars.jpg"

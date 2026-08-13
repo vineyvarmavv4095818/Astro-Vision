@@ -1,24 +1,15 @@
-
-img {
-    height: 190px;
-    width: auto;
-}
-
 .main-fav{
     padding:10px 10px 10px 20px;
     margin-left:230px;
     margin-top: 90px;
-    /* display: flex; */
     border: 1px solid rgba(133, 132, 133, 0.4);
     border-radius: 15px;
     border-right: none;
     height: 600px;
     border-left: none;
     background-color: black;
-
     overflow-y: auto;
     overflow-x: auto;
-    /* box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.4); */
 }
 
 .grid-fav {

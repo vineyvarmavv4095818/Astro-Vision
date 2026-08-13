@@ -14,8 +14,6 @@
 
     <div class="top-box">
 
-        <!-- <img src="{{ url_for('static', filename='moon.png') }}"
-        class="topbox-img"> -->
         <div>
             <i class="fa-solid fa-rocket" style="color:rgb(199, 0, 199); font-size: 30px;"></i>
             <span class="app-name">AstroVision</span>
@@ -71,7 +69,6 @@
 
     <div class="sidebar">
 
-    
         <a href="/">
             <i class="fa-solid fa-house" style="margin-right: 7px; color: rgb(220, 43, 226);"></i>
             Home
@@ -127,12 +124,9 @@
     </div>
 
 
-
-
     {% block content %}
 
     {% endblock %}
-
 
 
     {% block lower_buttons %}
@@ -195,8 +189,6 @@
     </div>
     {% endblock %}
 
-    
-
 </div>
     <footer>
         <div>
@@ -222,13 +214,11 @@ Built with Python • Flask • SQLite • HTML • CSS
         </div>
 
     </footer>
-    
 
     <div id="imageModal" class="modal">
         <span class="close">&times;</span>
         <img id="modalImage">
     </div>
-
 
 <script src="{{ url_for('static', filename='script.js') }}"></script>
 

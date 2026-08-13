@@ -14,7 +14,6 @@
                 {{ date }}
             </div>
 
-
             <form action="/favorite" method="POST">
 
                 <input type="hidden" name="title" value="{{ title }}">
@@ -24,17 +23,10 @@
                 <input type="hidden" name="media_type" value="{{ media_type }}">
 
                 <button type="submit" class="add-fav-main">
-
                     Add to Favorites
-
-                    <i class="fa-solid fa-heart"
-                        style="color: rgb(255, 0, 0); margin-right: 7px;">
-                    </i>
-
+                    <i class="fa-solid fa-heart"style="color: rgb(255, 0, 0); margin-right: 7px;"></i>
                 </button>
-
             </form>
-
         </div>
 
         <p class="p2">
@@ -42,7 +34,6 @@
         </p>
 
     </div>
-
 
     {% if media_type == "image" %}
 

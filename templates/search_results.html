@@ -1,17 +1,10 @@
 {% extends "base.html" %}
 
-
-{% block title %}
-Search Results - AstroVision
-{% endblock %}
-
+{% block title %} Search Results - AstroVision {% endblock %}
 
 {% block extra_css %}
-
 <link rel="stylesheet"href="{{ url_for('static', filename='result.css') }}">
-
 {% endblock %}
-
 
 {% block content %}
 
@@ -21,31 +14,23 @@ Search Results - AstroVision
     Results for "{{ keyword }}"
     </h1>
 
-
 <div class="results">
 
     <div class="grid-result">
         {% if results %}
 
         {% for item in results %}
-
             <div class="result-card">
-
                 <img src="{{ item.image }}">
-
-                <h3>
-                    {{ item.title }}
-                </h3>
-
+                <h3>{{ item.title }}</h3>
             </div>
-
         {% endfor %}
 
-    {% else %}
+        {% else %}
 
         <h2>No results found.</h2>
 
-    {% endif %}
+        {% endif %}
     </div>
 
 </div>
@@ -53,10 +38,8 @@ Search Results - AstroVision
 
 {% endblock %}
 
-
 {% block lower_buttons %}
 {% endblock %}
-
 
 {% block fact %}
 {% endblock %}
