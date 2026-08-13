@@ -255,10 +255,6 @@ def jwst():
 
     jwst_images = [
 
-        {
-            "title": "Cosmic Cliffs",
-            "image": "/static/jwst/cosmic_cliffs.jpg"
-        },
 
         {
             "title": "Pillars of Creation",
