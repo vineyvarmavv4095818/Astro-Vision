@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AstroVision</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    {% block extra_css %}
+    {% endblock %}
+</head>
+<body>
+
+    <div class="top-box">
+
+        <!-- <img src="{{ url_for('static', filename='moon.png') }}"
+        class="topbox-img"> -->
+        <div>
+            <i class="fa-solid fa-rocket" style="color:rgb(199, 0, 199); font-size: 30px;"></i>
+            <span class="app-name">AstroVision</span>
+            <p>Explore NASA's Daily Astronomy Pictures</p>
+        </div>
+
+        <div class="search-box">
+            <form action="/search">
+                <input
+                    type="text"
+                    name="keyword"
+                    list="space-keywords"
+                    class="Search_bar"
+                    placeholder="Search Space Topics...">
+
+                <datalist id="space-keywords">
+                    <option value="Mars">
+                    <option value="Moon">
+                    <option value="Galaxy">
+                    <option value="Nebula">
+                    <option value="Black Hole">
+                    <option value="Saturn">
+                    <option value="Jupiter">
+                    <option value="Earth">
+                    <option value="Solar System">
+                    <option value="Stars">
+                    <option value="Sun">
+                </datalist>
+
+                <button type="submit" class="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+        </div>
+
+        <div>
+            <form method="POST" >
+                <input
+                    type="date"
+                    name="date"
+                    class="date"
+                    min="1995-06-16"
+                    max="{{ today }}"
+                    required>
+                <button type="submit" class="find">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    Find
+                </button>
+            </form>
+        </div>
+    </div>
+
+
+<div class="container">
+
+    <div class="sidebar">
+
+    
+        <a href="/">
+            <i class="fa-solid fa-house" style="margin-right: 7px; color: rgb(220, 43, 226);"></i>
+            Home
+        </a>
+
+        <a href="/random">
+            <i class="fa-solid fa-shuffle" style=" margin-right: 7px;"></i>
+            Random APOD
+        </a>
+
+        <form action="/favorite" method="POST" >
+            <input type="hidden" name="title" value="{{ title }}">
+            <input type="hidden" name="date" value="{{ date }}">
+            <input type="hidden" name="image_url" value="{{ image_url }}">
+            <input type="hidden" name="explanation" value="{{ explanation }}">
+            <input type="hidden" name="media_type" value="{{ media_type }}">
+
+            <button type="submit" class="add-fav">
+                <i class="fa-regular fa-heart" style="color: red; margin-right: 7px;" ></i>
+                Add to Favorites
+            </button>
+        </form>
+
+        <a href="/favorites">
+            <i class="fa-regular fa-star" style="color: yellow; margin-right: 7px;" ></i>
+            Favorites
+        </a>
+
+        <a href="/jwst">
+            <i class="fa-solid fa-crosshairs" style="color: rgb(47, 162, 255); margin-right: 7px;"></i>
+            Telescope Gallery
+        </a>
+
+        <a href="/favorites">
+            <i class="fa-regular fa-trash-can" style="color: rgb(255, 101, 101); margin-right: 7px;" ></i>
+            Delete favorites
+        </a>
+
+        <a href="/?date={{ previous_date }}">
+            <i class="fa-solid fa-caret-left" style="color: rgb(220, 43, 226); margin-right: 7px;"></i>
+            Previous Day
+        </a>
+
+        <a href="/?date={{ next_date }}">
+            <i class="fa-solid fa-caret-right" style="color: rgb(220, 43, 226); margin-right: 7px;"></i>
+            Next Day
+        </a>
+
+        <a href="/about">
+            <i class="fa-solid fa-circle-info"style="color: rgb(219, 219, 219); margin-right: 7px;"></i>
+            About
+        </a>
+    </div>
+
+
+
+
+    {% block content %}
+
+    {% endblock %}
+
+
+
+    {% block lower_buttons %}
+    <div class="lwr-butt">
+
+        <div class="lwr-random">
+            <a href="/random">
+                <h6>
+                    <i class="fa-solid fa-shuffle" style="color: chartreuse; "></i>
+                    Random APOD
+                </h6>
+                <p>Discover a random astronomy image</p>
+            </a>
+        </div>
+
+        <div class="lwr-glry">
+            <a href="/jwst">
+                <h6>
+                    <i class="fa-solid fa-image" style="color: cornflowerblue;"></i>
+                    Telescope gallery
+                </h6>
+                <p>Explore images from JWST & Hubble</p>
+            </a>
+        </div>
+
+        <div class="lwr-fav">
+            <a href="/favorites">
+                <h6>
+                    <i class="fa-solid fa-star" style="color: rgb(255, 238, 0); " ></i>
+                    Favorites
+                </h6>
+                <p>View your favorite APODs</p>
+            </a>
+        </div>
+
+        <div class="lwr-dlt">
+            <a href="/favorites">
+                <h6>
+                    <i class="fa-regular fa-trash-can" style="color: rgb(218, 82, 82);" ></i>
+                    Delete favorites
+                </h6>
+                <p>Manage your favorites</p>
+            </a>
+        </div>
+
+    </div>
+
+    {% endblock %}
+
+    {% block fact %}
+    <div class="fact">
+        <img src="{{ url_for('static', filename='jupi.png') }}"
+        class="sidebar-img">
+        <h4>
+            <i class="fa-solid fa-star" style="color: yellow;"></i>
+            Astro-Fact!
+        </h4>
+        
+        <p>{{ space_fact }}</p>
+    </div>
+    {% endblock %}
+
+    
+
+</div>
+    <footer>
+        <div>
+            <pre>
+Powered by NASA APOD API
+Built with Python • Flask • SQLite • HTML • CSS
+
+© 2026 AstroVision. All rights reserved.</pre>
+        </div>
+
+        <div class="footer-links">
+
+        <a href="https://github.com/vineyvarmavv4095818"target="_blank"rel="noopener noreferrer">
+            <i class="fa-brands fa-github" ></i>
+            GitHub
+        </a>
+
+        <a href="https://www.nasa.gov/"target="_blank"rel="noopener noreferrer">
+            <i class="fa-solid fa-earth-americas" ></i>
+            NASA
+        </a>
+
+        </div>
+
+    </footer>
+    
+
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img id="modalImage">
+    </div>
+
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>

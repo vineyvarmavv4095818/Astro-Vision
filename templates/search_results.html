@@ -1,34 +1,62 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='result.css') }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-</head>
-<body>
+{% extends "base.html" %}
+
+
+{% block title %}
+Search Results - AstroVision
+{% endblock %}
+
+
+{% block extra_css %}
+
+<link rel="stylesheet"href="{{ url_for('static', filename='result.css') }}">
+
+{% endblock %}
+
+
+{% block content %}
+
+<div class="main-result">
     <h1>
-        <i class="fa-brands fa-sistrix"></i>
-        Results for "{{ keyword }}"</h1>
+    <i class="fa-brands fa-sistrix"></i>
+    Results for "{{ keyword }}"
+    </h1>
+
 
 <div class="results">
-{% if results %}
 
-    {% for item in results %}
+    <div class="grid-result">
+        {% if results %}
 
-        <div class="card">
-            <img src="{{ item.image }}">
-            <h3>{{ item.title }}</h3>
-        </div>
+        {% for item in results %}
 
-    {% endfor %}
+            <div class="result-card">
 
-{% else %}
+                <img src="{{ item.image }}">
+
+                <h3>
+                    {{ item.title }}
+                </h3>
+
+            </div>
+
+        {% endfor %}
+
+    {% else %}
+
+        <h2>No results found.</h2>
+
+    {% endif %}
+    </div>
+
+</div>
 </div>
 
-    <h2>No results found.</h2>
+{% endblock %}
 
-{% endif %}
-</body>
-</html>
+
+{% block lower_buttons %}
+{% endblock %}
+
+
+{% block fact %}
+{% endblock %}

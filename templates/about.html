@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+About - AstroVision
+{% endblock %}
+
+{% block extra_css %}
+
+<link rel="stylesheet"href="{{ url_for('static', filename='about.css') }}">
+
+{% endblock %}
+
+{% block content %}
+
+<div class="main-about">
+
+    <h1>
+        <i class="fa-solid fa-circle-info" style="color: dimgray;"></i>
+        About AstroVision
+    </h1>
+
+    <p>
+        AstroVision is a space exploration web application
+        that allows users to explore NASA's Astronomy Picture
+        of the Day and discover fascinating content about our universe.
+    </p>
+
+
+    <h2>🚀 What can you do with AstroVision?</h2>
+
+    <div class="about-features">
+
+        <div class="about-card">
+            <i class="fa-solid fa-image" style="color: skyblue;"></i>
+            <h3>NASA APOD</h3>
+            <p>
+                Explore NASA's Astronomy Picture of the Day
+                along with its description and date.
+            </p>
+        </div>
+
+
+        <div class="about-card">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <h3>Space Search</h3>
+            <p>
+                Search for astronomy-related topics and
+                discover relevant space images.
+            </p>
+        </div>
+
+
+        <div class="about-card">
+            <i class="fa-solid fa-star" style="color: yellow;"></i>
+            <h3>Favorites</h3>
+            <p>
+                Save your favorite APOD images and videos
+                and manage them using the SQLite database.
+            </p>
+        </div>
+
+
+        <div class="about-card">
+            <i class="fa-solid fa-crosshairs" style="color: rgb(47, 162, 255);"></i>
+            <h3>Telescope Gallery</h3>
+            <p>
+                Explore fascinating images captured by
+                space telescopes such as JWST and Hubble.
+            </p>
+        </div>
+
+    </div>
+
+
+    <h2>🛠 Technology Used</h2>
+
+    <div class="tech-stack">
+
+        <span>Python</span>
+        <span>Flask</span>
+        <span>SQLite</span>
+        <span>Jinja2</span>
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>REST API</span>
+
+    </div>
+
+
+    <h2>🎯 Purpose of the Project</h2>
+
+    <p>
+        This project was developed to gain practical experience
+        in Python web development, Flask, REST API integration,
+        database management, Jinja2 templating and frontend design.
+    </p>
+
+</div>
+
+{% endblock %}
+
+
+{% block lower_buttons %}
+{% endblock %}
+
+
+{% block fact %}
+{% endblock %}

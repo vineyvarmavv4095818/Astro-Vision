@@ -1,39 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='jwst.css') }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-</head>
-<body>
+{% extends "base.html" %}
+
+{% block extra_css %}
+
+<link rel="stylesheet"href="{{ url_for('static', filename='jwst.css') }}">
+
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="main-glry">
 
     <h1>
-        <i class="fa-solid fa-crosshairs"></i>
-        Deep Space Gallery</h1>
+        <i class="fa-solid fa-crosshairs" style="color: rgb(47, 162, 255);"></i>
+        Telescope gallery
+    </h1>
 
-<div class="gallery">
 
-{% for item in images %}
 
-    <div class="card">
+    <div class="grid-glry">
+        {% for item in images %}
 
-    <h3>{{ item.title }}</h3>
+        <div class="card">
 
-    <img src="{{ item.image }}" id="media">
+            <h3>{{ item.title }}</h3>
 
-    <p class="description">
-    {{ item.description }}
-    </p>
+            <img src="{{ item.image }}">
 
+        </div>
+
+    {% endfor %}
     </div>
 
-{% endfor %}
 
 </div>
 
-<br>
+{% endblock %}
 
-</body>
-</html>
+{% block lower_buttons %}
+{% endblock %}
+
+
+{% block fact %}
+{% endblock %}

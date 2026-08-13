@@ -1,4 +1,9 @@
-<!DOCTYPE html>
+{% extends "base.html" %}
+
+{% block content %}
+
+
+    <!DOCTYPE html>
 <html>
 <head>
     <title>My Favorites</title>
@@ -6,49 +11,58 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='fav.css') }}">
 </head>
 <body>
+    <div class="main-fav">
+    <h1>
+        <i class="fa-regular fa-star" style="color: yellow;" ></i>
+        MY FAVORITE APODs</h1>
 
-    <h1>MY FAVORITE APODs</h1>
+    <div class="grid-fav">
+        {% for item in favorites %}
 
-    {% for item in favorites %}
+    <div class="favorite-card">
 
-<div class="favorite-card">
+        <h3>{{ item.title }}</h3>
+        
 
-    {% if item.media_type == "image" %}
+        {% if item.media_type == "image" %}
 
-    <img src="{{ item.image_url }}">
+        <img src="{{ item.image_url }}">
 
-{% else %}
+    {% else %}
 
-    <iframe
-        src="{{ item.image_url }}"
-        width="500"
-        height="300"
-        allowfullscreen>
-    </iframe>
+        <iframe
+            src="{{ item.image_url }}"
+            width="500"
+            height="300"
+            allowfullscreen>
+        </iframe>
 
-{% endif %}
+    {% endif %}
 
-<div class="content">
+        <div class="content">
 
-        <h2>{{ item.title }}</h2>
-        <p class="date">{{ item.date }}</p>
-        <p class="description">
-            {{ item.explanation }}
-        </p>
+            
 
-    <a href="/delete_favorite/{{ item.date }}">
-    <button class="delete-btn">
-        <i class="fa-solid fa-trash-can"></i>
-        Remove
-    </button>
-    </a>
-
-</div>
-</div>
-
-
+            <a href="/delete_favorite/{{ item.date }}">
+                <button class="delete-btn">
+                    <i class="fa-solid fa-trash-can"></i>
+                    Remove
+                </button>
+            </a>
+        </div>
+    </div>
 
     {% endfor %}
-
+    </div>
+    </div>
 </body>
 </html>
+
+
+{% endblock %}
+
+{% block lower_buttons %}
+{% endblock %}
+
+{% block fact %}
+{% endblock %}
