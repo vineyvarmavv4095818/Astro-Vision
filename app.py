@@ -1,12 +1,17 @@
 import sqlite3
 import random
+import os
+
 from flask import Flask, render_template, request, redirect
 import requests
 from datetime import datetime, timedelta
+from dotenv import load_dotenv
+
+load_dotenv()
 
 app = Flask(__name__)
 
-API_KEY = "EWqIN1vhaBmFaOeq2RL3wP5CKbIKBrYBWKYSNhIG"
+API_KEY = os.getenv("NASA_API_KEY")
 
 SPACE_FACTS = [
     "The Sun contains about 99.8% of the total mass in our Solar System, making it the dominant gravitational force for every planet.",
