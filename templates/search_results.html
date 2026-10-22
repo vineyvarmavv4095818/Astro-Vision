@@ -1,39 +1,37 @@
 {% extends "base.html" %}
 
-{% block title %} Search Results - AstroVision {% endblock %}
+{% block title %}Search Results - AstroVision{% endblock %}
 
 {% block extra_css %}
-<link rel="stylesheet"href="{{ url_for('static', filename='result.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='result.css') }}">
 {% endblock %}
 
 {% block content %}
 
 <div class="main-result">
     <h1>
-    <i class="fa-brands fa-sistrix"></i>
-    Results for "{{ keyword }}"
+        <i class="fa-brands fa-sistrix"></i>
+        Results for "{{ keyword }}"
     </h1>
 
-<div class="results">
+    <div class="results">
 
-    <div class="grid-result">
         {% if results %}
-
-        {% for item in results %}
+        <div class="grid-result">
+            {% for item in results %}
             <div class="result-card">
-                <img src="{{ item.image }}">
+                <img src="{{ item.image|replace('http://', 'https://') }}"
+                     alt="{{ item.title }}"
+                     loading="lazy">
                 <h3>{{ item.title }}</h3>
             </div>
-        {% endfor %}
-
+            {% endfor %}
+        </div>
         {% else %}
-
-        <h2>No results found.</h2>
-
+        <h2>No results found for "{{ keyword }}". Try another space topic, like Mars, nebula or galaxy.</h2>
         {% endif %}
-    </div>
 
-</div>
+    </div>
 </div>
 
 {% endblock %}

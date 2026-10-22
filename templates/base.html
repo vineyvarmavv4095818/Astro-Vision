@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>AstroVision</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -21,13 +23,14 @@
         </div>
 
         <div class="search-box">
-            <form action="/search">
+            <form action="/search" method="get">
                 <input
                     type="text"
                     name="keyword"
                     list="space-keywords"
                     class="Search_bar"
-                    placeholder="Search Space Topics...">
+                    placeholder="Search Space Topics..."
+                    required>
 
                 <datalist id="space-keywords">
                     <option value="Mars">
@@ -48,7 +51,7 @@
         </div>
 
         <div>
-            <form method="POST" >
+            <form action="/" method="get">
                 <input
                     type="date"
                     name="date"
@@ -75,11 +78,12 @@
         </a>
 
         <a href="/random">
-            <i class="fa-solid fa-shuffle" style=" margin-right: 7px;"></i>
+            <i class="fa-solid fa-shuffle" style="margin-right: 7px;"></i>
             Random APOD
         </a>
 
-        <form action="/favorite" method="POST" >
+        {% if title and date %}
+        <form action="/favorite" method="POST">
             <input type="hidden" name="title" value="{{ title }}">
             <input type="hidden" name="date" value="{{ date }}">
             <input type="hidden" name="image_url" value="{{ image_url }}">
@@ -87,13 +91,14 @@
             <input type="hidden" name="media_type" value="{{ media_type }}">
 
             <button type="submit" class="add-fav">
-                <i class="fa-regular fa-heart" style="color: red; margin-right: 7px;" ></i>
+                <i class="fa-regular fa-heart" style="color: red; margin-right: 7px;"></i>
                 Add to Favorites
             </button>
         </form>
+        {% endif %}
 
         <a href="/favorites">
-            <i class="fa-regular fa-star" style="color: yellow; margin-right: 7px;" ></i>
+            <i class="fa-regular fa-star" style="color: yellow; margin-right: 7px;"></i>
             Favorites
         </a>
 
@@ -103,29 +108,32 @@
         </a>
 
         <a href="/favorites">
-            <i class="fa-regular fa-trash-can" style="color: rgb(255, 101, 101); margin-right: 7px;" ></i>
+            <i class="fa-regular fa-trash-can" style="color: rgb(255, 101, 101); margin-right: 7px;"></i>
             Delete favorites
         </a>
 
+        {% if previous_date %}
         <a href="/?date={{ previous_date }}">
             <i class="fa-solid fa-caret-left" style="color: rgb(220, 43, 226); margin-right: 7px;"></i>
             Previous Day
         </a>
+        {% endif %}
 
+        {% if next_date %}
         <a href="/?date={{ next_date }}">
             <i class="fa-solid fa-caret-right" style="color: rgb(220, 43, 226); margin-right: 7px;"></i>
             Next Day
         </a>
+        {% endif %}
 
         <a href="/about">
-            <i class="fa-solid fa-circle-info"style="color: rgb(219, 219, 219); margin-right: 7px;"></i>
+            <i class="fa-solid fa-circle-info" style="color: rgb(219, 219, 219); margin-right: 7px;"></i>
             About
         </a>
     </div>
 
 
     {% block content %}
-
     {% endblock %}
 
 
@@ -135,7 +143,7 @@
         <div class="lwr-random">
             <a href="/random">
                 <h6>
-                    <i class="fa-solid fa-shuffle" style="color: chartreuse; "></i>
+                    <i class="fa-solid fa-shuffle" style="color: chartreuse;"></i>
                     Random APOD
                 </h6>
                 <p>Discover a random astronomy image</p>
@@ -148,14 +156,14 @@
                     <i class="fa-solid fa-image" style="color: cornflowerblue;"></i>
                     Telescope gallery
                 </h6>
-                <p>Explore images from JWST & Hubble</p>
+                <p>Explore images from JWST &amp; Hubble</p>
             </a>
         </div>
 
         <div class="lwr-fav">
             <a href="/favorites">
                 <h6>
-                    <i class="fa-solid fa-star" style="color: rgb(255, 238, 0); " ></i>
+                    <i class="fa-solid fa-star" style="color: rgb(255, 238, 0);"></i>
                     Favorites
                 </h6>
                 <p>View your favorite APODs</p>
@@ -165,7 +173,7 @@
         <div class="lwr-dlt">
             <a href="/favorites">
                 <h6>
-                    <i class="fa-regular fa-trash-can" style="color: rgb(218, 82, 82);" ></i>
+                    <i class="fa-regular fa-trash-can" style="color: rgb(218, 82, 82);"></i>
                     Delete favorites
                 </h6>
                 <p>Manage your favorites</p>
@@ -173,18 +181,18 @@
         </div>
 
     </div>
-
     {% endblock %}
 
     {% block fact %}
     <div class="fact">
         <img src="{{ url_for('static', filename='jupi.png') }}"
-        class="sidebar-img">
+             class="sidebar-img"
+             alt="Jupiter">
         <h4>
             <i class="fa-solid fa-star" style="color: yellow;"></i>
             Astro-Fact!
         </h4>
-        
+
         <p>{{ space_fact }}</p>
     </div>
     {% endblock %}
@@ -201,15 +209,15 @@ Built with Python • Flask • SQLite • HTML • CSS
 
         <div class="footer-links">
 
-        <a href="https://github.com/vineyvarmavv4095818"target="_blank"rel="noopener noreferrer">
-            <i class="fa-brands fa-github" ></i>
-            GitHub
-        </a>
+            <a href="https://github.com/vineyvarmavv4095818" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-github"></i>
+                GitHub
+            </a>
 
-        <a href="https://www.nasa.gov/"target="_blank"rel="noopener noreferrer">
-            <i class="fa-solid fa-earth-americas" ></i>
-            NASA
-        </a>
+            <a href="https://www.nasa.gov/" target="_blank" rel="noopener noreferrer">
+                <i class="fa-solid fa-earth-americas"></i>
+                NASA
+            </a>
 
         </div>
 
@@ -217,7 +225,7 @@ Built with Python • Flask • SQLite • HTML • CSS
 
     <div id="imageModal" class="modal">
         <span class="close">&times;</span>
-        <img id="modalImage">
+        <img id="modalImage" alt="Enlarged view">
     </div>
 
 <script src="{{ url_for('static', filename='script.js') }}"></script>

@@ -2,58 +2,53 @@
 
 {% block content %}
 
-    <!DOCTYPE html>
-<html>
-<head>
-    <title>My Favorites</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="{{ url_for('static', filename='fav.css') }}">
-</head>
-<body>
-    <div class="main-fav">
-    <h1>
-        <i class="fa-regular fa-star" style="color: yellow;" ></i>
-        MY FAVORITE APODs</h1>
+<link rel="stylesheet" href="{{ url_for('static', filename='fav.css') }}">
 
+<div class="main-fav">
+    <h1>
+        <i class="fa-regular fa-star" style="color: yellow;"></i>
+        MY FAVORITE APODs
+    </h1>
+
+    {% if favorites %}
     <div class="grid-fav">
         {% for item in favorites %}
 
-    <div class="favorite-card">
+        <div class="favorite-card">
 
-        <h3>{{ item.title }}</h3>
-        
-        {% if item.media_type == "image" %}
-            <img src="{{ item.image_url }}">
+            <h3>{{ item.title }}</h3>
+            <p class="fav-date">{{ item.date }}</p>
 
-        {% else %}
+            {% if item.media_type == "image" %}
+                <img src="{{ item.image_url|replace('http://', 'https://') }}"
+                     alt="{{ item.title }}">
+            {% else %}
+                <iframe
+                    src="{{ item.image_url|replace('http://', 'https://') }}"
+                    title="{{ item.title }}"
+                    width="500"
+                    height="300"
+                    allowfullscreen>
+                </iframe>
+            {% endif %}
 
-        <iframe
-            src="{{ item.image_url }}"
-            width="500"
-            height="300"
-            allowfullscreen>
-        </iframe>
+            <div class="content">
+                <form action="/delete_favorite/{{ item.date }}" method="get">
+                    <button type="submit" class="delete-btn">
+                        <i class="fa-solid fa-trash-can"></i>
+                        Remove
+                    </button>
+                </form>
+            </div>
 
-        {% endif %}
-
-        <div class="content">
-
-            <a href="/delete_favorite/{{ item.date }}">
-                <button class="delete-btn">
-                    <i class="fa-solid fa-trash-can"></i>
-                    Remove
-                </button>
-            </a>
         </div>
-
-    </div>
 
         {% endfor %}
     </div>
-    </div>
-</body>
-</html>
-
+    {% else %}
+        <p class="no-favs">No favorites yet. Go back to the home page and add some!</p>
+    {% endif %}
+</div>
 
 {% endblock %}
 

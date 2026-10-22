@@ -1,6 +1,5 @@
 {% extends "base.html" %}
 
-
 {% block content %}
 <div class="main-content">
     <div class="main1">
@@ -24,33 +23,34 @@
 
                 <button type="submit" class="add-fav-main">
                     Add to Favorites
-                    <i class="fa-solid fa-heart"style="color: rgb(255, 0, 0); margin-right: 7px;"></i>
+                    <i class="fa-solid fa-heart" style="color: rgb(255, 0, 0); margin-right: 7px;"></i>
                 </button>
             </form>
         </div>
 
         <p class="p2">
-            {{ explanation[:350] }}...
+            {{ explanation[:350] }}{% if explanation|length > 350 %}...{% endif %}
         </p>
 
     </div>
 
     {% if media_type == "image" %}
 
-        <img src="{{ image_url }}"
-            alt="NASA Image"
-            id="media">
+        <img src="{{ image_url|replace('http://', 'https://') }}"
+             alt="{{ title }}"
+             id="media">
 
     {% else %}
 
         <iframe
-            src="{{ image_url }}"
+            src="{{ image_url|replace('http://', 'https://') }}"
+            title="{{ title }}"
             frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; picture-in-picture"
             allowfullscreen>
         </iframe>
 
-        </div>
-
     {% endif %}
 
+</div>
 {% endblock %}

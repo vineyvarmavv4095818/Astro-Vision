@@ -1,7 +1,9 @@
 {% extends "base.html" %}
 
+{% block title %}Telescope Gallery - AstroVision{% endblock %}
+
 {% block extra_css %}
-<link rel="stylesheet"href="{{ url_for('static', filename='jwst.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='jwst.css') }}">
 {% endblock %}
 
 {% block content %}
@@ -16,12 +18,12 @@
     <div class="grid-glry">
 
         {% for item in images %}
-
         <div class="card">
             <h3>{{ item.title }}</h3>
-            <img src="{{ item.image }}">
+            <img src="{{ item.image }}"
+                 alt="{{ item.title }}"
+                 loading="lazy">
         </div>
-
         {% endfor %}
 
     </div>

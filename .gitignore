@@ -1,4 +1,5 @@
 .env
-venv/
+apod.db
 __pycache__/
-*.pyc
+venv/
+.venv/
