@@ -1,6 +1,6 @@
 # 🌌 ASTRO-VISION
 
-**Cosmic Daily** is a web app that shows NASA's **Astronomy Picture of the Day (APOD)**. Every day, NASA publishes one image or video of our universe with a short explanation written by a professional astronomer. This app lets you view today's picture, browse the archive by date, and read the story behind each image in a clean full-screen layout.
+**AstroVision** is a web app that shows NASA's **Astronomy Picture of the Day (APOD)**. Every day, NASA publishes one image or video of our universe with a short explanation written by a professional astronomer. This app lets you view today's picture, browse the archive by date, and read the story behind each image in a clean full-screen layout.
 
 ---
 
