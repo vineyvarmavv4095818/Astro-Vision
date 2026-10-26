@@ -12,9 +12,6 @@
 - 🎲 **Random picture** button for surprise discoveries
 - 🔍 **HD view** to open the high-resolution version of an image
 - 🎬 **Video support:** when the daily item is a video, it plays inside the page instead of breaking the layout
-- ©️ **Credit line** showing the photographer or institution when one is given
-- ⏳ **Loading and error states** that explain what went wrong
-- 📱 **Responsive design** for phone, tablet and desktop
 
 ---
 
