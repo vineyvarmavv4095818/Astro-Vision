@@ -56,7 +56,7 @@ Useful options are `date` for a specific day, `start_date` and `end_date` for a 
 ## 📂 Project Structure
 
 ```text
-APOD-Explorer/
+AstroVision/
 │
 ├── app.py                  # Flask app and routes
 ├── requirements.txt
@@ -183,9 +183,6 @@ Open `127.0.0.1:5000` in your browser.
 
 ## 🔮 Future Improvements
 
-- Favorites list to save pictures you love
-- Search the archive by title or keyword
-- Gallery view for a range of dates
 - Download button for wallpapers
 - Light and dark theme toggle
 - Share button for the daily picture
